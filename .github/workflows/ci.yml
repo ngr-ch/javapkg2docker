@@ -27,11 +27,19 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Creating artifact directories
+      run: |
+        mkdir buildartifacts
+        mkdir deploymenttemplates
+    # Archive build artifact
+    - name: Archive Build artifacts
+      run: |
+        zip -qq -r ./buildartifacts/build.zip ./Application/build
 
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: nanajanashia/demo-app
+        image: ngrch1990/java-app
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
