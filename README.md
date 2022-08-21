@@ -1,12 +1,18 @@
-##### build the project
+| Language | Framework | Platform | Author |
+| -------- | -------- |--------|--------|
+| Java | Spring | Azure Web App, Virtual Machine| |
 
-    ./gradlew build
 
-##### build Docker image called java-app. Execute from root
+# Java Spring boot web application
 
-    docker build -t java-app .
-    
-##### push image to repo 
+Sample Java Spring Boot web application that you can use to deploy on Azure.
 
-    docker tag java-app demo-app:java-1.0
-    
+
+## License:
+
+See [LICENSE](LICENSE).
+
+## Contributing
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
